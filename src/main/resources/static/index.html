@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>RanchoBot AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main-wrapper">
+    <aside class="notification-sidebar">
+        <h2>Notifications</h2>
+        <div id="notification-list"></div>
+    </aside>
+
+    <div id="app-container">
+        <header class="app-header">
+            <div class="logo">Ask Rancho</div>
+            <div class="auth-buttons" id="auth-container"></div>
+        </header>
+        <main class="chat-area" id="chat-box"></main>
+        <footer class="input-area">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Ask me anything about MPGS...">
+                <button id="rancho-send-button">Ask Rancho</button>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

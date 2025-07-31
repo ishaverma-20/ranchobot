@@ -1,0 +1,76 @@
+What is MPGS?
+Mastercard Payment Gateway Services (MPGS) is a global payment processing platform from Mastercard. Its core purpose is to enable businesses to securely and efficiently accept a wide range of digital payments. It acts as a single, secure connection or "bridge" between a merchant's sales channels (like a website or app) and the global network of banks and payment providers.
+MPGS is designed for businesses of all sizes, from small online retailers to large multinational enterprises, helping them provide a smooth and flexible payment experience for their customers.
+
+What services does MPGS provide?
+Mastercard Payment Gateway Services (MPGS) offers a comprehensive suite of services to manage the entire digital payment lifecycle.
+1) Global Payment Processing: Enables businesses to accept payments online, in-app, and in-store from numerous payment methods, including cards, digital wallets, and bank transfers.
+2) Secure Gateway: Provides a PCI DSS-compliant environment with advanced security features like tokenization and encryption to protect sensitive data.
+3) Fraud Prevention & Risk Management: Includes tools like EMV 3D Secure (3DS), customizable risk rules, and AI-powered fraud screening to detect and block fraudulent transactions.
+4) Recurring & Subscription Billing: Supports automated billing cycles for subscription-based businesses, including features like stored credentials and installment plans.
+5) Flexible Integrations: Offers multiple ways to connect, including hosted payment pages, direct APIs for full customization, and mobile SDKs.
+6) Global Acquirer Connectivity: Connects merchants to a worldwide network of banks and acquirers, enabling multi-currency processing and local acquiring.
+7) Reporting and Reconciliation: Provides a robust dashboard with real-time transaction data, settlement reports, and analytics to help businesses manage their financial operations.
+
+Payment Methods supported by MPGS
+MPGS supports a comprehensive range of global card networks and popular digital wallets to ensure broad customer reach.
+1) Credit, Debit, and Prepaid Cards:
+    Mastercard
+    Visa
+    American Express
+    Discover, JCB, Diners Club, UnionPay, Maestro
+2) Digital Wallets:
+    Apple Pay
+    Google Pay
+    Samsung Pay, Click to Pay (EMVCo standard), Masterpass
+3) Bank Transfers:
+    iDEAL (Netherlands)
+    SOFORT (EU)
+    giropay (Germany), FPX (Malaysia), SEPA Direct Debit (Europe), ACH Debit (USA)
+4) Buy Now, Pay Later (BNPL):
+    Integrations with providers like Klarna, Afterpay, and Affirm allow customers to pay in installments.
+5) Regional and Alternative Methods:
+    Alipay & WeChat Pay (China)
+    GrabPay (Southeast Asia)
+    Paytm & UPI (India) - Note: Availability is dependent on the merchant's acquiring bank partnership. This is the most critical payment method for the Indian market.
+
+Security and Fraud Prevention Features
+How does MPGS handle security and fraud?
+1) MPGS prioritizes security with a multi-layered framework designed to protect both merchants and their customers.
+2) PCI DSS Compliance: The gateway is fully PCI DSS compliant, which significantly reduces a merchant's burden for handling sensitive card data.
+3) Tokenization: Replaces sensitive card numbers with a non-sensitive, unique identifier called a token. This means real card data is never stored on the merchant's system, minimizing risk.
+4) EMV 3D Secure (3DS): Supports Strong Customer Authentication (SCA) through protocols like 3D Secure. This adds an extra layer of verification (like an OTP) for card payments, reducing fraud and shifting liability for fraudulent chargebacks away from the merchant.
+5) AI-Powered Fraud Screening: Utilizes advanced tools and customizable risk rules to analyze transactions in real-time, identifying and blocking potentially fraudulent activity before it occurs.
+
+What are the Integration Options provided by MPGS?
+Integration Options provided by MPGS
+1) Hosted Checkout
+What is MPGS Hosted Checkout?
+Hosted Checkout is the simplest and fastest way to integrate with MPGS. It is a secure, ready-to-use payment page that is hosted by Mastercard.
+How it Works: When a customer is ready to pay, they are redirected from the merchant's website to the MPGS-hosted page to enter their payment details. After the transaction, they are sent back to the merchant's site.
+Key Benefit: The merchant never handles or stores sensitive card data directly, which dramatically simplifies PCI DSS compliance.
+Best For: Businesses looking for a quick, secure, and low-effort integration. It is customizable with branding and supports multiple payment methods and languages.
+2) Direct API
+What is MPGS Direct API Integration?
+Direct API integration provides merchants with complete control and customization over the checkout experience.
+How it Works: The merchant builds their own payment form on their website or app. They collect the customer's payment details and submit them securely to MPGS via backend API calls.
+Key Benefit: Allows for a fully seamless user experience, as the customer never leaves the merchant's site. It offers maximum flexibility in design and flow.
+Best For: Businesses with strong development resources who require a fully branded and customized checkout flow. This method requires the merchant to adhere to strict PCI DSS compliance standards.
+
+Network Tokenization Explained
+What is Network Tokenization in MPGS?
+Network tokenization is an advanced security feature where sensitive card information is replaced with a unique, non-sensitive identifier called a "network token." This token is issued and managed by the card network itself (e.g., Mastercard, Visa).
+Key Benefits of Network Tokenization:
+1) Increased Security: The real card number is never exposed, reducing the risk of data breaches.
+2) Improved Authorization Rates: Transactions using network tokens are often seen as more trusted by issuing banks, leading to fewer declines.
+3) Automatic Card Updates: The key advantage. When a customer's physical card expires or is replaced, the network token is automatically updated by the card network. This ensures recurring billing and subscriptions continue without interruption.
+4) Reduced PCI Scope: Simplifies PCI compliance for the merchant as they are not storing the primary account number (PAN).
+
+
+
+
+
+
+
+
+

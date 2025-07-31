@@ -1,0 +1,71 @@
+Transaction Types: 
+1) AUTHORIZE: Places a temporary hold on the customer's funds to reserve the money for a purchase before you ship the goods.
+2) CAPTURE: Collects the funds that were previously put on hold by an AUTHORIZE transaction, completing the sale.
+3) PAY: A single-step transaction that combines AUTHORIZE and CAPTURE to charge the customer immediately.
+4) VOID: Cancels a transaction on the same day it was made, before it settles, to release a hold or stop a payment.
+5) REFUND: Returns money to a customer for a transaction that has already settled, typically used for product returns.
+6) AUTHENTICATE_PAYER (3D Secure): Verifies the customer's identity with their bank, usually via an OTP, which is a mandatory security step in India.
+7) VERIFY: Checks if a card account is valid without making a charge, used when saving a card for future use.
+8) DISBURSEMENT: Sends a payout from your account to a customer's card, used for things like gaming winnings or seller payments.
+9) UPDATE_AUTHORIZATION: Modifies an existing authorization by changing the amount or extending the expiry date.
+10) CHARGEBACK: A forced reversal of a payment initiated by the customer's bank when a charge is disputed.
+11) STANDALONE_CAPTURE: Captures funds when the initial authorization was done outside the gateway, requiring you to provide the authorization code.
+
+Each transaction represents a specific action on a customer's order. Here is a detailed guide to the most common transaction types you will use with the Mastercard Payment Gateway.
+
+1. AUTHORIZE
+What AUTHORIZE it? An AUTHORIZE transaction is a request sent to the customer's bank to verify that their card is valid and has sufficient funds for a purchase. It places a temporary hold on the funds but does not transfer them to you.
+When to Use VERIFY: This is the first step in a two-step payment process. It is ideal for businesses that have a delay between when a customer places an order and when the goods are shipped or services are rendered. This ensures the customer can pay before you commit to fulfillment.
+How VERIFY Works: The gateway contacts the customer’s bank (the issuer) to reserve the funds. The customer's available credit limit is reduced by this amount. These holds are temporary and typically expire in 5 to 8 days, depending on the card scheme and issuer rules.
+Important Notes:
+An AUTHORIZE transaction does not appear on a customer's final billing statement, but it will often show up as a "pending charge" in their online banking app.
+You can indicate the Order Certainty (Final vs. Estimated) in your request. A Final certainty may qualify you for lower fees, while Estimated is for situations where the final amount might change (like hotel bookings) and may have higher fees and longer hold periods.
+
+2. CAPTURE
+What is CAPTURE? A CAPTURE transaction "captures" the funds that were previously put on hold by a successful AUTHORIZE transaction. This is the action that actually moves the money from the customer's account to yours.
+When to Use CAPTURE: This is the second step in the two-step payment process. You initiate a CAPTURE when you are ready to complete the sale, for example, when you ship the product.
+How CAPTURE Works: You send a CAPTURE request referencing the original AUTHORIZE. The gateway then instructs the acquirer to begin the settlement process, which transfers the funds.
+Important Notes:
+You can perform a partial capture if you ship an order in multiple parts.
+With the "Perform Excessive Captures" privilege enabled, you can capture an amount slightly higher than the original authorization, which is useful for industries where final costs might vary (e.g., hospitality).
+This is the transaction that will appear on the customer's final billing statement.
+
+3. PAY
+What is PAY? A PAY transaction, also known as a "Purchase" or "Sale," combines the AUTHORIZE and CAPTURE steps into a single message. It verifies the card, reserves the funds, and immediately initiates the transfer.
+When to Use PAY: This is ideal for situations where goods or services are delivered instantly, such as digital downloads, ticket sales, or in-person retail transactions.
+How PAY Works: The gateway sends a single request that completes the entire payment cycle at once. If your acquirer doesn't technically support a PAY transaction, the gateway can automatically perform an "auto-capture" by seamlessly converting your PAY request into an AUTHORIZE immediately followed by a CAPTURE.
+Important Notes:
+The Order Certainty for a PAY transaction is always considered Final.
+
+4. VOID
+What VOID it? A VOID transaction cancels a previous transaction before it has been settled (batched and sent for processing).
+When to Use VOID: Use a VOID to correct a mistake or handle a customer cancellation on the same day the transaction was made. It's cleaner and faster than a refund.
+How VOID Works:
+If you VOID an AUTHORIZE, the hold on the customer's funds is immediately released.
+If you VOID a CAPTURE or PAY, it prevents the funds from ever being transferred.
+Important Notes:
+A VOID is only possible before the daily batch of transactions is closed for settlement. After that, you must use a REFUND.
+
+5. REFUND
+What REFUND it? A REFUND transaction reverses a previously captured payment, sending money from your account back to the customer's original payment method.
+When to Use REFUND: Use this when a customer returns goods, cancels a service after being charged, or when you need to provide a credit for any other reason.
+How REFUND Works: You initiate a REFUND request targeting a successful CAPTURE or PAY transaction. The funds are then credited back to the customer's account.
+Important Notes:
+You can issue full or partial refunds, but the total refunded amount cannot exceed the captured amount unless you have the "Perform Excessive Refunds" privilege enabled.
+Refunds are processed like new transactions and can take several business days to appear on a customer's statement.
+Transaction processing fees are typically not returned to you when you issue a refund.
+
+6. AUTHENTICATE_PAYER (3D Secure)
+What AUTHENTICATE_PAYER it? This is a crucial security transaction that verifies the identity of the person making the payment. It's commonly known as 3D Secure (e.g., Mastercard Identity Check, Visa Secure).
+When to Use AUTHENTICATE_PAYER: This should be used for all online card transactions to prevent fraud.
+How AUTHENTICATE_PAYER Works: The customer is redirected to a secure page hosted by their own bank. They must then enter a password or, more commonly, a One-Time Password (OTP) sent to their registered mobile number to prove they are the legitimate cardholder.
+Indian Context: As per Reserve Bank of India (RBI) mandates, 3D Secure authentication is mandatory for almost all online card transactions in India. This step is critical for compliance and significantly reduces your liability for fraudulent chargebacks.
+
+7. VERIFY
+What is VERIFY? A VERIFY transaction checks if a customer's card account is valid without placing a hold on funds. It is typically done by running a zero-amount or very small-amount transaction that is automatically voided.
+When to Use VERIFY: This is useful when you want to save a customer's card details (i.e., create a token) for future use, or to validate an account before setting up a subscription.
+How VERIFY Works: The gateway sends a verification request to the issuer (e.g., an AVS check) to confirm the details are correct.
+
+8. DISBURSEMENT
+What is DISBURSEMENT? A DISBURSEMENT transaction sends funds from your account to a customer's card account. It is a payout, not a refund of a prior purchase.
+When to Use DISBURSEMENT: This is used for specific business models, such as paying out winnings for gaming companies, marketplace payouts to sellers, or insurance claim settlements.

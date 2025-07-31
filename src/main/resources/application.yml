@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rancho-bot
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.1:8b
+      embedding:
+        options:
+          model: nomic-embed-text
+
+# --- NEW: Configuration for the notification service ---
+notifications:
+  file:
+    path: "C:/Users/20ish/Desktop/notifications.txt"
