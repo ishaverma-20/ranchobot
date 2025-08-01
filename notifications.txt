@@ -1,0 +1,3 @@
+New Feature: Enable Mastercard Payment Passkeys for a more secure customer checkout.
+Notice: Transactions routed via our Acquirer partner are currently failing; we are investigating with their team.
+Increase Revenue and Security with MPGS Network Tokenization
