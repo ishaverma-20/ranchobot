@@ -1,4 +1,4 @@
-Transaction Types: 
+Transaction Types:
 1) AUTHORIZE: Places a temporary hold on the customer's funds to reserve the money for a purchase before you ship the goods.
 2) CAPTURE: Collects the funds that were previously put on hold by an AUTHORIZE transaction, completing the sale.
 3) PAY: A single-step transaction that combines AUTHORIZE and CAPTURE to charge the customer immediately.

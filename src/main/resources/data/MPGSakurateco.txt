@@ -1,20 +1,20 @@
-What is MPGS?
-Mastercard Payment Gateway Services (MPGS) by Mastercard is a comprehensive payment gateway that empowers businesses to accept and manage digital payments worldwide. Whether operating online, in-store, or via mobile, MPGS provides a competitive edge by ensuring secure, scalable, and efficient payment processing.
-MPGS supports nearly 200 acquiring connections globally, offering businesses access to a broad payment ecosystem. By leveraging MPGS, companies gain access to Mastercard’s extensive industry expertise and technological advancements, helping them optimize transaction management, reduce payment friction, and enhance customer satisfaction.
+What is Mastercard PGS?
+Mastercard Payment Gateway Services (Mastercard PGS) by Mastercard is a comprehensive payment gateway that empowers businesses to accept and manage digital payments worldwide. Whether operating online, in-store, or via mobile, Mastercard PGS provides a competitive edge by ensuring secure, scalable, and efficient payment processing.
+Mastercard PGS supports nearly 200 acquiring connections globally, offering businesses access to a broad payment ecosystem. By leveraging Mastercard PGS, companies gain access to Mastercard’s extensive industry expertise and technological advancements, helping them optimize transaction management, reduce payment friction, and enhance customer satisfaction.
 How Mastercard Payment Gateway Services work
 
 How It Works (Transaction Flow)
-What is the transaction flow for MPGS?
-MPGS processes transactions through a secure, multi-step flow designed for efficiency and security.
-1) Payment Authorization: When a customer initiates a payment, MPGS securely captures the payment details, whether from a card, digital wallet, or another payment method.
-2) Data Encryption and Tokenization: To protect sensitive information, MPGS immediately encrypts the data and uses tokenization. Tokenization replaces the actual card number with a unique, non-sensitive token, meaning the merchant never stores raw card data.
+What is the transaction flow for Mastercard PGS?
+Mastercard PGS processes transactions through a secure, multi-step flow designed for efficiency and security.
+1) Payment Authorization: When a customer initiates a payment, Mastercard PGS securely captures the payment details, whether from a card, digital wallet, or another payment method.
+2) Data Encryption and Tokenization: To protect sensitive information, Mastercard PGS immediately encrypts the data and uses tokenization. Tokenization replaces the actual card number with a unique, non-sensitive token, meaning the merchant never stores raw card data.
 3) Transaction Routing: The secured transaction data is routed to the appropriate acquiring bank from a network of nearly 200 global options.
-4) Fraud Prevention: During the process, MPGS applies advanced fraud detection tools, such as EMV 3D Secure authentication and real-time risk analysis, to prevent fraudulent transactions.
-5) Payment Settlement & Reporting: After successful authorization, the transaction is settled. MPGS provides merchants with detailed reporting and analytics tools to track performance and manage their finances.
+4) Fraud Prevention: During the process, Mastercard PGS applies advanced fraud detection tools, such as EMV 3D Secure authentication and real-time risk analysis, to prevent fraudulent transactions.
+5) Payment Settlement & Reporting: After successful authorization, the transaction is settled. Mastercard PGS provides merchants with detailed reporting and analytics tools to track performance and manage their finances.
 
-Key Benefits for Businesses in MPGS
-What are the main benefits of using MPGS?
-MPGS offers several key benefits that help businesses streamline payment processing and enhance customer experience.
+Key Benefits for Businesses in Mastercard PGS
+What are the main benefits of using Mastercard PGS?
+Mastercard PGS offers several key benefits that help businesses streamline payment processing and enhance customer experience.
 1) Global Reach & Cross-Border Transactions: Connects to nearly 200 acquirers worldwide, simplifying international sales and multi-currency processing.
 2) Flexible and Modular Solutions: Businesses can select the specific features they need, such as tokenization, recurring billing, or alternative payment methods, to fit their unique business model.
 3) Scalability for Growth: The platform is designed to handle high transaction volumes, ensuring reliable performance as a business grows.
@@ -22,21 +22,20 @@ MPGS offers several key benefits that help businesses streamline payment process
 5) White-Label Customization: Allows businesses to present the payment gateway under their own brand, reinforcing customer trust and loyalty.
 6) Future-Ready Technology: Continuously integrates emerging payment technologies to keep businesses competitive in a changing digital economy.
 
-Security and Data Protection Features in MPGS
-How does MPGS ensure payment security?
-MPGS uses a multi-layered security approach to protect merchants and customers, built on industry-leading standards.
+Security and Data Protection Features in Mastercard PGS
+How does Mastercard PGS ensure payment security?
+Mastercard PGS uses a multi-layered security approach to protect merchants and customers, built on industry-leading standards.
 1) PCI DSS Compliance: The gateway is fully compliant with the Payment Card Industry Data Security Standard (PCI DSS), reducing the merchant's compliance burden.
 2) Encryption and Tokenization: All sensitive data is encrypted in transit. Tokenization is used to replace real card numbers with unique, valueless tokens, so raw card data is never stored by the merchant.
 3) EMV 3D Secure Authentication: This feature provides Strong Customer Authentication (SCA) by requiring an additional verification step (like an OTP) from the customer, which significantly reduces the risk of fraudulent transactions.
-4) AI-Powered Fraud Detection: MPGS utilizes advanced, AI-driven tools for real-time transaction monitoring and risk analysis to identify and block potential fraud before it can cause damage.
+4) AI-Powered Fraud Detection: Mastercard PGS utilizes advanced, AI-driven tools for real-time transaction monitoring and risk analysis to identify and block potential fraud before it can cause damage.
 
 Integration Method: White-Label Software
-What is a white-label integration for MPGS?
-A white-label integration is an alternative approach where a business uses a third-party payment software platform (that has MPGS pre-integrated) and presents it under its own brand.
+What is a white-label integration for Mastercard PGS?
+A white-label integration is an alternative approach where a business uses a third-party payment software platform (that has Mastercard PGS pre-integrated) and presents it under its own brand.
 Advantages of White-Label Integration:
 1) Faster Deployment: Avoids the time and complexity of direct API development.
 2) Reduced Compliance Burden: The white-label provider typically handles PCI DSS certification and security maintenance.
-3) Multi-Acquirer Support: Can provide access to MPGS alongside hundreds of other payment methods and acquirers through a single connection.
+3) Multi-Acquirer Support: Can provide access to Mastercard PGS alongside hundreds of other payment methods and acquirers through a single connection.
 4) Custom Branding: Offers a seamless, branded payment experience for customers without backend development.
 5) Value-Added Features: Often includes advanced features like automated reconciliation, sophisticated routing, and chargeback management tools.
-
